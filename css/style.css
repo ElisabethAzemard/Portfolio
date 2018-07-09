@@ -1,0 +1,296 @@
+@media only screen and (min-width: 758px){
+
+/* ----- GENERAL ----- */
+/* hover */
+body a:hover, nav#gen a:hover, nav#projets a:hover {
+	color: #78CCCC;
+}
+
+/* BOUTONS modif / suppr */
+/* affichage du bouton mofidier / supprimer au hover de l'image */
+div#modifcouv, div.modif a#modifimagep {
+	display: none;
+}
+
+article:hover div#modifcouv, div.modif:hover a#modifimagep {
+	display: block;
+}
+
+div.modif {
+	padding: 0;
+}
+
+div.modif a#modifimagep {
+	padding: 3% 0 2.5% 0;
+	position: absolute;
+	top: 0;
+}
+
+/*--------- LANDING "PAGE" ---------*/
+/* Elisabeth Azémard */
+h1{
+	font-size: 48pt;
+	padding-top: 20%;
+}
+
+h2#titre{
+	font-size: 30pt;
+	margin-bottom: 3em;
+}
+
+/* // */
+p#titre {
+	font-family: 'Futura';
+	font-size: 20pt;
+	padding: 20px;
+}
+
+/* TITRE */
+h2#titre {
+	font-family: 'Futuralight', 'Didact Gothic', sans-serif;
+	font-size: 20pt;
+	margin-bottom: 5em;
+}
+
+div#landing {
+	display: block;
+	text-align: center;
+	background-color: rgba(120,204,204,0);
+	height: 100vh;
+	width: 100%;
+	background-color: #78CCCC;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	transition: 1s;
+	position: relative;
+	z-index: 3;
+}
+
+#portfolioButton{
+	font-family: 'Futura';
+	font-size: 15pt;
+	color: white;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 7px;
+	position: relative;
+	bottom: 0;
+	width: 200px;
+	height: 50px;
+	padding: 5px;
+	transition: 0.2s;
+	text-transform: lowercase;
+}
+
+#portfolioButton:hover {
+	background-color: white;
+	color: #78CCCC;
+	border: none;
+}
+
+/* CONTENU MASQUÉ */
+div#content, div#contentindex {
+	width: 89%;
+	min-height: 100%;
+	margin: auto;
+	position: relative;
+	display: none;
+}
+
+div#content {
+	display: block;
+}
+
+/*--------- NAVIGATION GAUCHE ---------*/
+/* LOGO */
+header {
+	width: 15%;
+	float: left;
+	z-index: 3;
+	min-height: 100vh;
+}
+
+header h2 p {
+	display: none;
+}
+
+header h2 a {
+	float: left;
+	width: 100%;
+}
+
+header h2 a img {
+	width: 100%;
+	padding: 2em 0;
+}
+
+header h2, header nav#projets {
+	background-color: white;
+	width: 80%;
+	padding-right: 20%;
+}
+
+header nav#projets a {
+	text-align: right;
+	display: block;
+	width: 100%;
+}
+
+/*--------- NAVIGATION GÉNÉRALE ---------*/
+nav#gen, section {
+	width: 83%;
+	float: left;
+	text-align: right;
+}
+
+nav#gen {
+	top: 0;
+	width: 89%;
+	padding: 3em 0 2em 0;
+}
+
+/*--------- SECTION, CONTENU GÉNÉRAL ---------*/
+section {
+	position: absolute;
+	left: 16.86%;
+	top: 19.30vh;
+	text-align: left;
+	padding-bottom: 2em;
+}
+
+/* affichage de la catégorie de projet en Desktop */
+section h2#projets {
+	display: none;
+}
+
+/* APERÇU PROJET */
+section article {
+	width: 31.25%;
+	margin: 2% 2% 0 0;
+	float: left;
+}
+
+/*--------- SECTION PORTFOLIO ---------*/
+/* MISE EN FORME DES IMAGES DE COUV */
+section article img.couv {
+	width: 100%;
+	border-radius: 5px;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(90%);
+	transition: 0.2s;
+}
+
+section article:hover img.couv{
+	filter: grayscale(40%);
+}
+
+/* hover & apparition du nom du projet */
+section article h3 a {
+	opacity: 1;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: rgb(100,100,100);
+	text-transform: lowercase;
+	transition: 0.2s;
+}
+
+section article:hover h3 a {
+	opacity: 1;
+	color: #78CCCC;
+}
+
+/*--------- SECTION PROJET ---------*/
+h2#titreprojet {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	font-size: 50pt;
+	text-align: left;
+}
+
+p#description{
+	margin: 3em 0;
+}
+
+article#galerie {
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 5%;
+	clear: both;
+}
+
+article#galerie img {
+	clear: both;
+}
+
+section article#galerie {
+	width: auto;
+}
+
+/*--------- SECTION A PROPOS ---------*/
+div#about, div#avatar {
+	width: 50%;
+	float: left;
+}
+
+/* GAUCHE */
+h2#about, h2#contact, h2#projets {
+	font-size: 72pt;
+	margin-bottom: 0.10em;
+	display: block;
+}
+
+h2#about {
+	margin: 0;
+}
+
+div#about p {
+	margin-bottom: 2em;
+}
+
+h2#contact {
+	display: none;
+}
+
+a#cv {
+	margin-left: 0;
+}
+
+nav#rs {
+	margin-top: 1.5em;
+	text-align: left;
+}
+
+nav#rs a {
+	margin-right: 0.5%;
+}
+
+/* DROITE */
+div#avatar {
+	width: 50%;
+	margin-top: 0;
+}
+
+div#avatar img {
+	width: 70%;
+	margin: auto;
+	border-radius: 300px;
+}
+
+/* A PROPOS */
+p#contact {
+	text-align: center;
+}
+
+/* FORMS */
+
+[type="submit"]:hover{
+	color: white;
+	background-color: #78CCCC;
+}
+
+}

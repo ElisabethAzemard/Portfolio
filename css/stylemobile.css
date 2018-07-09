@@ -1,0 +1,416 @@
+/*--------- GÉNÉRAL ---------*/
+*{padding: 0; margin: 0; text-decoration: none;}
+
+/* FONTS */
+@font-face {
+	font-family: 'Futuralight';
+	src: url('../polices/FuturaLight.ttf') format('truetype');
+}
+
+body {
+	width: 100%;
+	font-family: 'Futuralight', 'Didact Gothic', sans-serif;
+	font-size: 14pt;
+}
+
+#content, #contentindex {
+	padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+	font-family: 'Futura', 'Didact Gothic', sans-serif;
+}
+
+/* COULEURS */
+body, a {
+	color: rgb(100,100,100);
+	transition: 0.2s;
+}
+
+/* nav active */
+nav#gen a.active, nav#projets a.active {
+	color: #78CCCC;
+}
+
+a:active {
+	color: #78CCCC;
+}
+
+/* message succès / erreur */
+.success, .error {
+	color: #53d19a;
+	text-transform: none;
+	text-align: center;
+}
+.error {
+	color: #f4415e;
+}
+
+/* BORDER RADIUS */
+img{
+	border-radius: 7px;
+}
+
+/* AFFICHAGE DES BOUTONS MODIFIER / SUPPRIMER */
+article, div.modif {
+	position: relative;
+	z-index: 1;
+	margin: 1% 0;
+}
+
+/* bouton modif à droite du texte à mofidier */
+div.modif p{
+	display: inline-block;
+	border-radius: 5px;
+}
+
+/* emplacement du bouton mofidier / supprimer sur image projet & image couverture */
+div#modifcouv, div.modif a#modifimagep {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	padding: 2% 2% 0.75% 2%;
+	border-radius: 0 5px 0 5px;
+	background-color: #f4415e;
+}
+
+/* style mofidier image projet */
+div.modif a#modifimagep {
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	width:100%;
+	padding: 4% 0 2.5% 0;
+	border-radius: 5px 5px 0 0;
+}
+
+div.modif a#modifimagep img {
+	height: 15px;
+}
+
+/* affichage du bouton mofidier / supprimer au hover de l'image */
+article:hover div#modifcouv, div.modif:hover a#modifimagep{
+	display: block;
+}
+
+/* couleur bouton suppr */
+section a img#supprprojet {
+	background-color: #f4415e;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/*----- LANDING PAGE -----*/
+
+/* ELISABETH AZEMARD */
+h1 {
+	font-size: 30pt;
+	text-transform: lowercase;
+	padding-top: 50%;
+}
+
+/* // */
+p#titre {
+	font-family: 'Futura';
+	font-size: 20pt;
+	padding: 20px;
+}
+
+/* WEBDESIGNER */
+h2#titre {
+	font-family: 'Futuralight', 'Didact Gothic', sans-serif;
+	font-size: 20pt;
+	margin-bottom: 5em;
+}
+
+div#landing {
+	display: none;
+}
+
+/* CONTENU MASQUÉ */
+div#content, div#contentindex {
+	width: 89%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+}
+
+/*--------- NAVIGATION GAUCHE ---------*/
+nav a {
+	text-transform: lowercase;
+}
+
+/* LOGO */
+header h2 {
+	text-align: center;
+}
+
+header h2 p {
+	display: inline;
+	padding: 1em 0;
+	font-size: 20pt;
+}
+
+header h2 a {
+	float: left;
+	width: 20%;
+}
+
+header h2 a img {
+	width: 50%;
+	padding: 1em 0;
+}
+
+header {
+	width: 89%;
+	clear: left;
+	position: fixed;
+	z-index: 2;
+	background-color: white;
+}
+
+header nav#projets {
+	text-align: center;
+	font-size: 16pt;
+	clear: left;
+	z-index: 1;
+	background-color: white;
+}
+
+header nav#projets a {
+	display: inline; /* + sur la même ligne */
+	margin-right: 3%;
+	text-decoration: none;
+	color: rgb(100,100,100);
+}
+
+header nav#projets a#pagecourante, header nav#gen a#pagecourante {
+	color: #78CCCC;
+}
+
+/*--------- NAVIGATION GÉNÉRALE ---------*/
+nav#gen, section {
+	width: 100%;
+	text-align: center;
+	background-color: white;
+}
+
+nav#gen {
+	width: 89%;
+	padding: 0.5em 0 1em 0;
+	font-size: 16pt;
+	position: fixed;
+	top: 18.80vh;
+	z-index: 2;
+	background-color: white;
+}
+
+/*--------- SECTION, CONTENU GÉNÉRAL ---------*/
+section {
+	text-align: center;
+	position: absolute;
+	top:27.75vh;
+	z-index: 0;
+}
+
+/* non affichage de la catégorie de projet en Desktop */
+section h2#projets {
+	display: none;
+}
+
+
+/* APERÇU PROJET */
+section article {
+	position: relative;
+	width: 100%;
+	margin: 5% 0 0 0;
+}
+
+/*--------- SECTION PORTFOLIO ---------*/
+
+/* MISE EN FORME DES IMAGES DE COUV */
+section article img.couv {
+	width: 100%;
+}
+
+/*--------- SECTION PROJET ---------*/
+
+h2#titreprojet {
+	display: inline-block;
+	margin-top: 0.5em;
+	font-size: 24pt;
+}
+
+section article#galerie {
+	margin-top: 0;
+	width: 100%;
+	clear: left;
+}
+
+section article#galerie img {
+	width: 100%;
+}
+
+[alt='modifier'], [alt=supprimer]{
+	height: 15px;
+	line-height: 15px;
+}
+
+[alt='modifier']{
+	background-color : #53d19a;
+	border-radius: 7px;
+	padding: 5px;
+}
+
+p#description{
+	margin: 1em 0;
+}
+
+/*--------- SECTION A PROPOS ---------*/
+div#about, div#avatar {
+	width: 100%;
+}
+
+/* GAUCHE */
+h2#projets {
+	font-size: 30pt;
+	margin-bottom: 0.10em;
+}
+
+h2#about, h2#contact {
+	text-transform: lowercase;
+}
+
+h2#about {
+	margin: 0 0 1em 0;
+}
+
+h2#contact {
+	display: none;
+}
+
+div#about p {
+	margin-bottom: 2em;
+	margin-top: 1em;
+}
+
+a#cv {
+	border: 1px solid #78CCCC;
+	border-radius: 7px;
+	padding: 0.5em;
+	transition: 0.4s;
+	width: 50%;
+	text-transform: lowercase;
+}
+
+a#cv:hover {
+	background-color: #78CCCC;
+	color: white;
+}
+
+nav#rs {
+	text-align: center;
+}
+
+nav#rs a {
+	margin-right: 3%;
+	display: inline;
+}
+
+nav#rs a img {
+	width: 30px;
+}
+
+/* DROITE */
+div#avatar {
+	text-align: center;
+	margin-top: 2em;
+}
+div#avatar img {
+	width: 100%;
+}
+
+/*--------- SECTION CONTACT ---------*/
+p#contact {
+	text-transform: none;
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+form input, form textarea, form select {
+	text-transform: lowercase;
+	background-color: transparent;
+	width: 70%;
+	margin-left: 13%;
+	border: none;
+	border-bottom: 1px solid #78CCCC;
+	margin-bottom: 0.5em;
+	padding: 1%;
+	font-family: 'Futuralight', 'Didact Gothic', 'OpenSans', sans-serif;
+	font-size: 10pt;
+	color: rgb(100,100,100);
+}
+
+form textarea, form select, [type="file"] {
+	text-transform: lowercase;
+	background-color: transparent;
+	border-radius: 7px;
+	border: 1px solid #78CCCC;
+	margin-top: 1em;
+}
+
+form textarea {
+	padding: 2%;
+	width: 68%;
+}
+
+form select {
+	width: 72%;
+}
+
+[type="submit"]{
+	background-color: transparent;
+	margin-top: 1em;
+	border: 1px solid #78CCCC;
+	background-color: white;
+	border-radius: 7px;
+	transition: 0.3s;
+	width: 72%;
+}
+
+form {
+	text-align: left;
+}
+
+/* FORM DE CREATION DE PROJET */
+h2#new {
+	display: none;
+}
+
+[type="select"]{
+	border: 1px solid #78CCCC;
+	background-color: white;
+	border-radius: 7px;
+}
+
+input#cb1, input#cb2, input#cb3 {
+float: left;
+width: 10%;
+}
+
+label {
+	margin-left: 13%;
+}
+
+/*--------- FOOTER ---------*/
+footer {
+	width: 89%;
+	text-align: center;
+	position: absolute;
+	bottom:0px;
+	padding: 0.5em 0;
+	background-color: white;
+	font-size: 10pt;
+}
