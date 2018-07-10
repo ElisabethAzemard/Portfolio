@@ -12,9 +12,8 @@
 	</head>
 
 	<body>
-				<div id="content">
-
-	<header>
+			<div id="content">
+				<header>
 					<h2>
 						<p class="header">Elisabeth</p>
 						<a href="http://elisabethazemard.fr/pages/portfolio.php"><img src="http://elisabethazemard.fr/images/logo.png" alt="logo"></a>
@@ -41,4 +40,4 @@
 						}
 					?>
 					</nav>
-	</header>
+				</header>
