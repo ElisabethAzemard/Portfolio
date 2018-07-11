@@ -3,6 +3,7 @@ session_start();
 include('../includes/header.inc.php');
 include('../includes/nav.inc.php');
 include('../includes/connexion.inc.php');
+
 if(isset($_GET['tag'])){
 	$tag = $_GET['tag'];
 		switch($_GET['tag']){
@@ -28,8 +29,8 @@ if(isset($_GET['tag'])){
 		}
 
 	echo '<h2 id="projets">'.$tag.'</h2>';
-	$sql = "SELECT * FROM projets WHERE tag='$tag' ORDER BY id DESC";
-	$reponse = mysqli_query($connexion,$sql);
+	$sql			= "SELECT * FROM projets WHERE tag='$tag' ORDER BY id DESC";
+	$reponse	= mysqli_query($connexion,$sql);
 		while($r = mysqli_fetch_array($reponse)){
 			echo '<article>';
 			if(isset($_SESSION['level']) && $_SESSION['level'] == 1){

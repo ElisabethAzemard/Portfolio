@@ -80,9 +80,8 @@ if(isset($_GET['projet'])){
 															</article>
 														</div>';
 				$openform 				= '<form action="http://elisabethazemard.fr/private/traitement.php?modiftype='.$_GET['modif'].'" method="post" enctype="multipart/form-data">
-								<input type=hidden name="id" value="'.$r['id'].'">';
-				$closeform = '<br><input type="submit" name="update" value="Mettre à jour le projet">
-						</form>';
+															<input type=hidden name="id" value="'.$r['id'].'">';
+				$closeform 				= '<br><input type="submit" name="update" value="Mettre à jour le projet"></form>';
 
 				switch ($_GET['modif']) {
 					case 'updatenom':
